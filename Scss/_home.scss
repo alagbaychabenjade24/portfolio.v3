@@ -1,0 +1,85 @@
+@import './colors';
+
+.home {
+	background-color: $primary-color;
+
+	&__content {
+		width: 90%;
+		max-width: 1100px;
+		padding: 80px 0 100px;
+		margin: 0 auto;
+	}
+
+	div {
+		h1 {
+			font-size: 24px;
+			font-weight: 300;
+			color: white;
+		}
+
+		p {
+			font-size: 28px;
+			font-weight: 600;
+			color: white;
+			width: 100%;
+			margin: 15px 0 50px;
+
+			@media (min-width: 650px) {
+				font-size: 35px;
+			}
+
+			@media (min-width: 850px) {
+				font-size: 40px;
+				width: 800px;
+			}
+
+			@media (min-width: 1100px) {
+				font-size: 50px;
+				width: 850px;
+			}
+		}
+
+		.home__buttons {
+			display: flex;
+			flex-direction: column;
+
+			@media (min-width: 480px) {
+				flex-direction: row;
+			}
+
+			a {
+				text-decoration: none;
+				width: 195px;
+				margin-bottom: 20px;
+
+				@media (min-width: 480px) {
+					margin-bottom: 0;
+					margin-right: 20px;
+				}
+
+				&:nth-of-type(1) {
+					border: 2px solid white;
+					background-color: white;
+					padding: 12px 20px;
+
+					span,
+					i {
+						color: $primary-color;
+					}
+
+					span {
+						font-weight: 500;
+						margin-right: 5px;
+					}
+				}
+
+				&:nth-of-type(2) {
+					font-weight: 500;
+					color: white;
+					border: 2px solid white;
+					padding: 12px 20px;
+				}
+			}
+		}
+	}
+}

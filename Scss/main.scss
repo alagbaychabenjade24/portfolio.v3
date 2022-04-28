@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import '../Pages/Contact/contact';
+
+@import '../Scss/header';
+@import '../Scss/home';
+@import '../Scss/about';
+@import '../Scss/testimonials';
+@import '../Scss/start';
+@import '../Scss/footer';
+
+@import '../Scss/sectionHeaders';
+
+* {
+	font-family: 'Poppins', sans-serif;
+	color: $secondary-color;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	outline: none;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	position: relative;
+
+	.scroll__to__top {
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		width: 60px;
+		opacity: 0;
+		transition: 0.2s ease-in-out;
+		cursor: pointer;
+	}
+
+	.scroll__to__top--active {
+		opacity: 1;
+		bottom: 30px;
+	}
+
+	.about,
+	.works,
+	.testimonials,
+	.contact {
+		width: 90%;
+		max-width: 1100px;
+		padding-top: 100px;
+		margin: 0 auto;
+	}
+
+	footer {
+		width: 90%;
+		max-width: 1100px;
+		margin: 30px auto;
+	}
+}

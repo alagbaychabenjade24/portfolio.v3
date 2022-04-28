@@ -1,0 +1,106 @@
+@import './colors';
+
+header {
+	position: sticky;
+	top: 0;
+	background-color: $primary-color;
+	border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
+	padding: 25px 0;
+	width: 100%;
+	z-index: 999;
+
+	nav {
+		display: flex;
+		align-items: center;
+		max-width: 1100px;
+		width: 90%;
+		margin: 0 auto;
+
+		.menu {
+			display: block;
+			cursor: pointer;
+			z-index: 9;
+
+			@media (min-width: 640px) {
+				display: none;
+			}
+
+			div {
+				background-color: white;
+				height: 2px;
+				width: 25px;
+
+				&:nth-of-type(2) {
+					margin: 5px 0;
+				}
+			}
+		}
+
+		ul {
+			display: none;
+			background-color: $primary-color;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			padding: 80px 0;
+
+			@media (min-width: 640px) {
+				position: static;
+				display: flex;
+				padding: 0;
+			}
+
+			li {
+				list-style-type: none;
+				width: 90%;
+				margin: 0 auto;
+
+				&:nth-of-type(even) {
+					margin: 30px auto;
+
+					@media (min-width: 640px) {
+						margin: 0 30px;
+					}
+				}
+
+				a {
+					color: rgba(255, 255, 255, 0.596);
+					text-decoration: none;
+
+					&:hover {
+						color: white;
+					}
+				}
+			}
+		}
+	}
+}
+
+.scrolling-active {
+	background-color: #fff;
+	border-bottom: 0.5px solid rgb(243, 244, 246);
+
+	nav {
+		.menu {
+			div {
+				background-color: $secondary-color;
+			}
+		}
+
+		ul {
+			background-color: #fff;
+
+			li {
+				a {
+					color: rgba(0, 0, 0, 0.596);
+
+					&:hover {
+						color: $secondary-color;
+					}
+				}
+			}
+		}
+	}
+}

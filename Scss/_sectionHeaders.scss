@@ -1,0 +1,22 @@
+.section__title {
+	font-size: 12px;
+	font-weight: 600;
+	color: $primary-color;
+	letter-spacing: 3px;
+	user-select: none;
+}
+
+.section__subtitle {
+	font-size: 22px;
+	font-weight: 500;
+	max-width: 600px;
+	margin: 5px 0 50px;
+
+	@media (min-width: 400px) {
+		font-size: 25px;
+	}
+
+	@media (min-width: 500px) {
+		font-size: 30px;
+	}
+}
