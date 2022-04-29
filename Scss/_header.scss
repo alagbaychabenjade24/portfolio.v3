@@ -7,7 +7,6 @@ header {
 	border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
 	padding: 25px 0;
 	width: 100%;
-	z-index: 999;
 
 	nav {
 		display: flex;
@@ -29,22 +28,35 @@ header {
 				background-color: white;
 				height: 2px;
 				width: 25px;
+				transition: 0.3s ease-in-out;
 
 				&:nth-of-type(2) {
 					margin: 5px 0;
 				}
 			}
 		}
+		.close {
+			.one {
+				transform: rotate(-45deg) translate(-4px, 6px);
+			}
+
+			.two {
+				opacity: 0;
+			}
+
+			.three {
+				transform: rotate(45deg) translate(-4px, -6px);
+			}
+		}
 
 		ul {
-			display: none;
 			background-color: $primary-color;
 			position: absolute;
-			top: 0;
+			top: -286.667px;
 			right: 0;
-			bottom: 0;
 			left: 0;
-			padding: 80px 0;
+			padding: 25px 0;
+			transition: 0.3s ease-in-out;
 
 			@media (min-width: 640px) {
 				position: static;
@@ -74,6 +86,10 @@ header {
 					}
 				}
 			}
+		}
+
+		.nav__links__active {
+			top: 66.6667px;
 		}
 	}
 }

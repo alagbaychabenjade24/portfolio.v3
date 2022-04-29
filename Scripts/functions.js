@@ -1,3 +1,12 @@
+const menu = document.querySelector('header nav .menu');
+const navLinks = document.querySelector('header nav ul');
+
+menu.addEventListener('click', () => {
+	menu.classList.toggle('close');
+
+	navLinks.classList.toggle('nav__links__active');
+});
+
 const scrollTop = document.querySelector('.scroll__to__top');
 
 window.addEventListener('scroll', () => {
