@@ -12,9 +12,19 @@
 
 	div {
 		h1 {
-			font-size: 24px;
+			font-size: 18px;
 			font-weight: 300;
 			color: white;
+
+			@media (min-width: 450px) {
+				br {
+					display: none;
+				}
+			}
+
+			@media (min-width: 850px) {
+				font-size: 24px;
+			}
 		}
 
 		p {
@@ -22,7 +32,7 @@
 			font-weight: 600;
 			color: white;
 			width: 100%;
-			margin: 15px 0 50px;
+			margin: 10px 0 50px;
 
 			@media (min-width: 650px) {
 				font-size: 35px;
