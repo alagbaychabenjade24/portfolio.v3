@@ -1,10 +1,19 @@
 const menu = document.querySelector('header nav .menu');
 const navLinks = document.querySelector('header nav ul');
+const navLinksLists = document.querySelectorAll('header nav ul li');
 
 menu.addEventListener('click', () => {
 	menu.classList.toggle('close');
 
 	navLinks.classList.toggle('nav__links__active');
+
+	navLinksLists.forEach(navLinksList => {
+		navLinksList.addEventListener('click', () => {
+			menu.classList.toggle('close');
+
+			navLinks.classList.remove('nav__links__active');
+		});
+	});
 });
 
 const scrollTop = document.querySelector('.scroll__to__top');
