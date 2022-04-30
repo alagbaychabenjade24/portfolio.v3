@@ -148,6 +148,7 @@ header nav ul {
 
 @media (min-width: 640px) {
   header nav ul {
+    background-color: rgba(255, 255, 255, 0);
     position: static;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -196,6 +197,12 @@ header nav .nav__links__active {
 
 .scrolling-active nav ul {
   background-color: #fff;
+}
+
+@media (min-width: 640px) {
+  .scrolling-active nav ul {
+    background-color: rgba(255, 255, 255, 0);
+  }
 }
 
 .scrolling-active nav ul li a {
