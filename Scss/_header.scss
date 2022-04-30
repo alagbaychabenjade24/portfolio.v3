@@ -35,12 +35,13 @@ header {
 				}
 			}
 		}
-		.close {
+		.menu--clicked {
 			.one {
 				transform: rotate(-45deg) translate(-4px, 6px);
 			}
 
 			.two {
+				transform: translateX(-5px);
 				opacity: 0;
 			}
 
