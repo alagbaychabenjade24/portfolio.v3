@@ -136,7 +136,6 @@ header nav .menu--clicked .three {
 }
 
 header nav ul {
-  background-color: #0152cc;
   position: absolute;
   top: -286.667px;
   right: 0;
@@ -144,6 +143,12 @@ header nav ul {
   padding: 25px 0;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
+}
+
+@media (min-width: 0) {
+  header nav ul {
+    background-color: #0152cc;
+  }
 }
 
 @media (min-width: 640px) {
@@ -195,8 +200,10 @@ header nav .nav__links__active {
   background-color: #041827;
 }
 
-.scrolling-active nav ul {
-  background-color: #fff;
+@media (min-width: 0) {
+  .scrolling-active nav ul {
+    background-color: #fff;
+  }
 }
 
 @media (min-width: 640px) {

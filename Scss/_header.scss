@@ -51,13 +51,16 @@ header {
 		}
 
 		ul {
-			background-color: $primary-color;
 			position: absolute;
 			top: -286.667px;
 			right: 0;
 			left: 0;
 			padding: 25px 0;
 			transition: 0.3s ease-in-out;
+
+			@media (min-width: 0) {
+				background-color: $primary-color;
+			}
 
 			@media (min-width: 640px) {
 				background-color: rgba(255, 255, 255, 0);
@@ -108,7 +111,9 @@ header {
 		}
 
 		ul {
-			background-color: #fff;
+			@media (min-width: 0) {
+				background-color: #fff;
+			}
 
 			@media (min-width: 640px) {
 				background-color: rgba(255, 255, 255, 0);
