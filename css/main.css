@@ -432,6 +432,7 @@ header nav .nav__links__active {
 }
 
 .start__contact a {
+  display: inline-block;
   font-weight: 500;
   color: white;
   border-radius: 5px;
@@ -439,6 +440,13 @@ header nav .nav__links__active {
   text-decoration: none;
   border: 2px solid #0152cc;
   padding: 12px 20px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.start__contact a:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 .footer {
