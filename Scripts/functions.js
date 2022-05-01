@@ -84,3 +84,7 @@ const sendEmail = () => {
 
 	form.reset();
 };
+
+successClose.addEventListener('click', () => {
+	successPopup.classList.remove('success__popup__active');
+});
