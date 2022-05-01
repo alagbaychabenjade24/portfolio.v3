@@ -51,6 +51,10 @@ window.addEventListener('scroll', () => {
 	}
 });
 
+const form = document.querySelector('form');
+const successPopup = document.querySelector('.success__popup');
+const successClose = document.querySelector('.success__popup__close');
+
 (function () {
 	emailjs.init('user_xeyKYZwBaxPmjLfS1peuQ');
 })();
@@ -64,12 +68,19 @@ const sendEmail = () => {
 		message: document.getElementById('message').value
 	};
 
-	emailjs.send('service_qksa7rc', 'template_rhljmcv', emailParams);
+	emailjs
+		.send('service_qksa7rc', 'template_rhljmcv', emailParams)
+		.then(response => {
+			if (response.status === 200) {
+				successPopup.classList.add('success__popup__active');
+
+				const removePopup = () => {
+					successPopup.classList.remove('success__popup__active');
+				};
+
+				setTimeout(removePopup, 8000);
+			}
+		});
+
+	form.reset();
 };
-
-const successPopup = document.querySelector('.success__popup');
-const successClose = document.querySelector('.success__popup__close');
-
-successClose.addEventListener('click', () => {
-	successPopup.classList.add('success__popup__remove');
-});

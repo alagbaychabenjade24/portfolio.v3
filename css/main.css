@@ -46,9 +46,7 @@
 
 .contact form .success__popup {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -114,8 +112,10 @@
   background-color: white;
 }
 
-.contact form .success__popup__remove {
-  display: none;
+.contact form .success__popup__active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .contact form button {

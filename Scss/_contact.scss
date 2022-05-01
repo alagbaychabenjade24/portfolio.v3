@@ -41,7 +41,7 @@
 
 		.success__popup {
 			position: relative;
-			display: flex;
+			display: none;
 			justify-content: space-between;
 			align-items: center;
 			font-size: 14px;
@@ -97,8 +97,8 @@
 			}
 		}
 
-		.success__popup__remove {
-			display: none;
+		.success__popup__active {
+			display: flex;
 		}
 
 		button {
