@@ -2,6 +2,7 @@ const menu = document.querySelector('header nav .menu');
 const navLinks = document.querySelector('header nav ul');
 const navLinksLists = document.querySelectorAll('header nav ul li');
 const main = document.querySelector('main');
+const footer = document.querySelector('footer');
 
 menu.addEventListener('click', () => {
 	menu.classList.toggle('menu--clicked');
@@ -18,6 +19,12 @@ menu.addEventListener('click', () => {
 });
 
 main.addEventListener('click', () => {
+	menu.classList.remove('menu--clicked');
+
+	navLinks.classList.remove('nav__links__active');
+});
+
+footer.addEventListener('click', () => {
 	menu.classList.remove('menu--clicked');
 
 	navLinks.classList.remove('nav__links__active');
@@ -42,4 +49,27 @@ window.addEventListener('scroll', () => {
 
 		navLinks.classList.remove('nav__links__active');
 	}
+});
+
+(function () {
+	emailjs.init('user_xeyKYZwBaxPmjLfS1peuQ');
+})();
+
+const sendEmail = () => {
+	const emailParams = {
+		first_name: document.getElementById('first-name').value,
+		last_name: document.getElementById('last-name').value,
+		email: document.getElementById('email').value,
+		company: document.getElementById('company').value,
+		message: document.getElementById('message').value
+	};
+
+	emailjs.send('service_qksa7rc', 'template_rhljmcv', emailParams);
+};
+
+const successPopup = document.querySelector('.success__popup');
+const successClose = document.querySelector('.success__popup__close');
+
+successClose.addEventListener('click', () => {
+	successPopup.classList.add('success__popup__remove');
 });

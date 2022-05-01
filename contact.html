@@ -10,9 +10,14 @@
 			crossorigin="anonymous"
 		></script>
 
+		<link
+			rel="stylesheet"
+			href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css"
+		/>
+
 		<link rel="stylesheet" href="css/main.css" />
 
-		<link rel="icon" href="../../Images/Icons/c-icon.svg" />
+		<link rel="icon" href="./Images/scroll_top.svg" />
 
 		<title>Contact • Chaben Alagbay</title>
 	</head>
@@ -67,22 +72,36 @@
 				<form>
 					<div class="container__grid">
 						<div>
-							<label for=""></label>
-							<input type="text" placeholder="First Name*" required />
+							<label for="first-name"></label>
+							<input
+								type="text"
+								placeholder="First Name*"
+								name="first-name"
+								id="first-name"
+								required
+							/>
 						</div>
 
 						<div>
-							<label for=""></label>
-							<input type="text" placeholder="Last Name*" required />
+							<label for="last-name"></label>
+							<input
+								type="text"
+								placeholder="Last Name*"
+								name="last-name"
+								id="last-name"
+								required
+							/>
 						</div>
 					</div>
 
 					<div>
 						<div>
-							<label for=""></label>
+							<label for="email"></label>
 							<input
 								type="email"
 								placeholder="Your email address*"
+								name="email"
+								id="email"
 								required
 							/>
 						</div>
@@ -90,28 +109,48 @@
 
 					<div>
 						<div>
-							<label for=""></label>
+							<label for="company"></label>
 							<input
 								type="text"
 								placeholder="Your company name*"
+								name="company"
+								id="company"
 								required
 							/>
 						</div>
 					</div>
 
 					<div>
-						<label for=""></label>
+						<label for="message"></label>
 						<textarea
-							name=""
-							id=""
+							name="message"
+							id="message"
 							rows="5"
 							placeholder="Tell me your what you're thinking*"
 						></textarea>
 					</div>
 
-					<div>
-						<input type="submit" value="Send Request!" />
-					</div>
+					<aside class="success__popup">
+						<div class="success__popup__message">
+							<i class="fa-solid fa-shield-check"></i>
+
+							<div>
+								<p class="success__popup__message__title">
+									Congratulations!
+								</p>
+
+								<p class="success__popup__message__phrase">
+									Your message has been sent.
+								</p>
+							</div>
+						</div>
+
+						<div class="success__popup__close">
+							<i class="fa-solid fa-xmark"></i>
+						</div>
+					</aside>
+
+					<button onclick="sendEmail()" type="button">Send Message</button>
 				</form>
 			</section>
 		</main>
@@ -191,6 +230,11 @@
 			</aside>
 		</footer>
 
-		<script src="../../Scripts/functions.js"></script>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+		></script>
+
+		<script src="./Scripts/functions.js"></script>
 	</body>
 </html>

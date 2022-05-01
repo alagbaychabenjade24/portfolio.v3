@@ -37,20 +37,83 @@
 				padding: 15px 10px;
 				margin-bottom: 40px;
 			}
+		}
 
-			input[type='submit'] {
-				font-weight: 500;
-				color: white;
-				background-color: $primary-color;
-				border-radius: 50px;
-				width: max-content;
-				padding: 15px 40px;
-				transition: 0.2s ease-in-out;
+		.success__popup {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-size: 14px;
+			background-color: rgba(0, 128, 0, 0.062);
+			color: green;
+			border: 2px solid rgba(0, 128, 0, 0.185);
+			border-radius: 15px;
+			width: 100%;
+			max-width: max-content;
+			padding: 15px 20px;
+			margin-bottom: 30px;
+
+			&__message {
+				display: flex;
+				align-items: center;
+				margin-right: 80px;
+
+				i {
+					font-size: 20px;
+					color: white;
+					background-color: #50dc6c;
+					border-radius: 100%;
+					padding: 10px;
+					margin-right: 10px;
+				}
+
+				&__title {
+					font-weight: 600;
+				}
+
+				&__phrase {
+					font-size: 13px;
+					color: rgb(68, 68, 68);
+				}
+			}
+
+			&__close {
+				position: absolute;
+				right: 15px;
 				cursor: pointer;
 
-				&:hover {
-					transform: scale(1.03);
+				i {
+					font-size: 20px;
+					color: rgb(68, 68, 68);
+					padding: 8px 11px;
+
+					&:hover {
+						color: $secondary-color;
+						border-radius: 10px;
+						background-color: white;
+					}
 				}
+			}
+		}
+
+		.success__popup__remove {
+			display: none;
+		}
+
+		button {
+			font-weight: 500;
+			color: white;
+			background-color: $primary-color;
+			border: 1px solid $primary-color;
+			border-radius: 50px;
+			width: max-content;
+			padding: 13px 40px;
+			transition: 0.2s ease-in-out;
+			cursor: pointer;
+
+			&:hover {
+				transform: scale(1.03);
 			}
 		}
 

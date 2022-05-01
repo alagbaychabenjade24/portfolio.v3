@@ -44,21 +44,96 @@
   margin-bottom: 40px;
 }
 
-.contact form div input[type='submit'] {
+.contact form .success__popup {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  background-color: rgba(0, 128, 0, 0.062);
+  color: green;
+  border: 2px solid rgba(0, 128, 0, 0.185);
+  border-radius: 15px;
+  width: 100%;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  padding: 15px 20px;
+  margin-bottom: 30px;
+}
+
+.contact form .success__popup__message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 80px;
+}
+
+.contact form .success__popup__message i {
+  font-size: 20px;
+  color: white;
+  background-color: #50dc6c;
+  border-radius: 100%;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.contact form .success__popup__message__title {
+  font-weight: 600;
+}
+
+.contact form .success__popup__message__phrase {
+  font-size: 13px;
+  color: #444444;
+}
+
+.contact form .success__popup__close {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+}
+
+.contact form .success__popup__close i {
+  font-size: 20px;
+  color: #444444;
+  padding: 8px 11px;
+}
+
+.contact form .success__popup__close i:hover {
+  color: #041827;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.contact form .success__popup__remove {
+  display: none;
+}
+
+.contact form button {
   font-weight: 500;
   color: white;
   background-color: #0152cc;
+  border: 1px solid #0152cc;
   border-radius: 50px;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  padding: 15px 40px;
+  padding: 13px 40px;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
   cursor: pointer;
 }
 
-.contact form div input[type='submit']:hover {
+.contact form button:hover {
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
 }
@@ -81,6 +156,7 @@ header {
   border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
   padding: 25px 0;
   width: 100%;
+  z-index: 10;
 }
 
 header nav {
